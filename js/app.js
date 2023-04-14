@@ -38,3 +38,7 @@ function fechaActual(){
     let fechaHoy = new Date().getFullYear();
     fecha.textContent = fechaHoy;
 }
+
+function irACompras() {
+    window.location.href = "compras.html";
+}
