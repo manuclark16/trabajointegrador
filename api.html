@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <h1>Información de la zona horaria de Buenos Aires:</h1>
+        <div id="output"></div>
+        <script>
+          const apiKey = '734PY2HGWCP1';
+          const apiUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=734PY2HGWCP1&format=json&by=zone&zone=America/Argentina/Buenos_Aires`;
+    
+          // Enviar una solicitud GET a la URL de la API
+          fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+              // Extraer la información de la zona horaria de Buenos Aires
+              const zoneName = data.zoneName;
+              const abbreviation = data.abbreviation;
+              const formattedTime = data.formatted;
+    
+              // Crear un elemento de párrafo con la información de la zona horaria
+              const output = document.getElementById('output');
+              const p = document.createElement('p');
+              p.textContent = `la hora actual es ${formattedTime}.`;
+    
+              // Agregar el elemento de párrafo al elemento de salida en la página
+              output.appendChild(p);
+            })
+            .catch(error => console.error(error));
+        </script>
+      </body>
+</body>
+</html>

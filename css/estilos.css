@@ -67,9 +67,9 @@ p, a{
 }
 
 .bordes:hover{
-    background-color: var(--naranjaclaro);
+background-color: var(--naranjaclaro);
     color: var(--oscuro);
-}
+}    
 .btn:hover{
     cursor: pointer;
 }
@@ -137,6 +137,7 @@ p, a{
     z-index: 3;
 }
 
+
 .navegacion{
     background-color: var(--verdeoscuro);
     position: absolute;
@@ -161,10 +162,7 @@ p, a{
     transition: background-color .3s ease-in-out;
 
 }
-.navegacion a:hover{
-    background-color: var(--naranjaclaro);
-    color: var(--blanco);
-}
+
 
 @media(min-width: 768px) {
     .navegacion a{
@@ -456,6 +454,17 @@ p, a{
     text-align: center;
     color: var(--blanco);
 }
+
+.redes{
+    color: white;
+    display: inline-block;
+}
+
+p, a {font-family: var(--parrafos);
+font-size: 29px;
+color: wheat;
+font-weight: bold;}
+
 
 @media(min-width: 768px) {
     .footer{
